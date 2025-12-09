@@ -1,9 +1,10 @@
 
-function capitalize(str) {
+export function capitalize(str) {
     
     return str[0].toUpperCase()+str.substring(1);
 }
 
-module.exports = {
-    capitalize : capitalize
+export function reverseString(str) {
+    return [...str].reverse().join("");
 }
+
