@@ -1,5 +1,5 @@
 
-import {capitalize, reverseString, calculator, ceasarCipher} from './tDD';
+import {capitalize, reverseString, calculator, ceasarCipher, analyzeArray} from './tDD';
 
 
 
@@ -51,3 +51,25 @@ expect(ceasarCipher('heLLo',3)).toBe('khOOr'));
 
 test('cipher of string with special characters', ()=>
 expect(ceasarCipher('Hello, World!',3)).toBe('Khoor, Zruog!'));
+
+//Analyze Array test
+
+test('if analyzeArray is defined', () =>
+expect(analyzeArray).toBeDefined());
+
+test('analyzeArray returns an object', ()=>
+expect(analyzeArray([1,8,3,4,2,6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6
+}));
+
+test('analyzeArray returns an object', ()=>
+expect(analyzeArray([0,0,0,0,0,0])).toEqual({
+    average: 0,
+    min: 0,
+    max: 0,
+    length: 6
+}));
+

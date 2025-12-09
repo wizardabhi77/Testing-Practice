@@ -55,3 +55,20 @@ export function ceasarCipher(str, key) {
     return cipher.join("");
 }
 
+export function analyzeArray(arr) {
+
+    let returnObj = {
+        average : 0,
+        min : Math.min(...arr),
+        max : Math.max(...arr),
+        length: arr.length
+    }
+
+    let avr = arr.reduce((prev,curr) => {
+        return prev + curr
+    },0);
+
+    returnObj.average = avr/returnObj.length;
+    return returnObj;
+}
+
